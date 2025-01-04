@@ -1,0 +1,328 @@
+/****** generel styling ******/
+
+body {
+  background-color: #e5e3d7;
+  max-width: 100%;
+  margin: 10px;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 10px;
+  max-width: 100%;
+}
+
+hr {
+  background-color: #ffd95f;
+  max-width: 100%;
+  height: 5px;
+  border: none;
+}
+
+/****** fonte og skriftstørrelser ********/
+
+h3 {
+  font-family: "philosopher", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #2082ff;
+}
+
+label {
+  font-family: "philosopher", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #2082ff;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2082ff;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2082ff;
+}
+
+/***** forside style *******/
+
+#Herocontainer {
+  width: 178%;
+  aspect-ratio: 7.82/1;
+  position: relative;
+}
+
+#herobillede {
+  width: 100%;
+  height: 100%;
+  background-image: url(/Billeder/HEROTEKST.svg);
+  background-size: cover;
+}
+
+.om_mig {
+  margin-top: 5rem;
+}
+
+#om_mig_knap {
+  aspect-ratio: 5/3;
+  width: 25%;
+  background-color: #ffd95f;
+  padding: 2%;
+  border: 5px solid black;
+}
+
+#om_mig_knap2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/Billeder/om_mig.png);
+  background-size: cover;
+}
+
+#portfolioknap {
+  aspect-ratio: 690/301;
+  width: 100%;
+  margin-top: 50px;
+}
+#portofolioknap2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/Billeder/portfolioknap.svg);
+  background-size: cover;
+}
+
+/***************** mikkels menu *****************/
+
+header {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo img {
+  max-width: 100%;
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 1px;
+  color: #2082ff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+  font-family: Arial;
+  font-size: xx-large;
+}
+
+.menu a:hover {
+  color: #f4d1df;
+}
+
+.burger {
+  width: 50px;
+  height: 2px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 10px;
+  background-color: #2082ff;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(-10px, -22px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(45px, -30px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #e5e3d7;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+  }
+}
+
+/********* mobil ********/
+@media (max-width: 700px) {
+  .hvidpynt {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #Herocontainer {
+    width: 100%;
+    aspect-ratio: 7.82/1;
+    position: relative;
+  }
+
+  .datoogurl {
+    margin-top: 50px;
+  }
+}
+
+/***** desktop ******/
+
+@media (min-width: 701px) {
+  .hvidpynt {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hvidpynt {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #om_mig_knap {
+    aspect-ratio: 5/3;
+    width: 40%;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  .Tilmeld {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .info_grid {
+    grid-column: 1;
+  }
+
+  .datoogurl {
+    grid-column: 2;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+/******** footer *********/
+
+.info h3 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#email {
+  background-color: #e5e3d7;
+  border: 5px solid #2082ff;
+  height: 30px;
+}
+
+.nyhedsbrev {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+#Globus {
+  aspect-ratio: 1/1;
+  width: 60%;
+}
+#Globus2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/Billeder/globus.svg);
+  background-size: cover;
+  padding: 5%;
+}
+
+.info_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10%;
+}
+
+.footer_centrer {
+  text-align: center;
+  margin: 0;
+}
