@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/iku7djw.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iku7djw.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Forside</title>
 </head>
@@ -19,7 +21,7 @@
             <ul class="menu">
                 <li><a href="index.html">Forside</a></li>
                 <li><a href="portfolio.html"> Portfolio</a></li>
-                <li><a href="om_mig.html">Om mig</a></li>
+                <li class="aktiv"><a href="om_mig.html">Om mig</a></li>
             </ul>
             <div class="burger">
                 <div class="line"></div>
@@ -31,9 +33,58 @@
 
     </header>
     <hr>
-    <main></main>
-    <footer></footer>
+    <main>
+
+        <div class="grid_1-1c">
+            <H1 class="overskrift">Om Mig</H1>
+            <p class="om_tekst">Mit navn er Silas Lien, og jeg er 26 år gammel multimediedesignstuderende på KEA. Jeg
+                har en baggrund inden for
+                musikproduktion og lyddesign, hvor jeg har skabt reklamemusik og arbejdet kreativt med lyd og musik i
+                mange år.
+                Med en opvækst på
+                en Steiner-skole har jeg altid haft en stærk forbindelse til æstetik og design, hvilket også afspejler
+                sig i mit
+                nuværende studie. Jeg elsker at kombinere kreativitet og teknologi for at skabe løsninger, der både ser
+                godt ud og
+                fungerer optimalt.</p>
+            <img class="portræt" src="/Billeder/OM_MIG_PORTRÆT.png" alt="">
+            <p class="om_tekst2">Jeg har erfaring med programmer som Logic Pro X, Figma, VS Code, Adobe Illustrator,
+                Premiere Pro, After Effects,
+                FileZilla og GitHub.</p>
+        </div>
+
+        <hr>
+        <hr>
+    </main>
+    <footer>
+        <div class="grid_1-1-1">
+
+            <form class="Tilmeld">
+                <div class="nyhedsbrev">
+                    <label for="email">Tilmeld dig nyhedsbrev:</label>
+                    <input id="email" name="email" type="email">
+                </div>
+            </form>
+            <div class="info_grid">
+                <div id="Globus">
+                    <div id="Globus2"></div>
+                </div>
+                <div class="info">
+                    <h3>+45 28 19 30 47</h3>
+                    <h3>sild@me.com</h3>
+                    <h3>Guldbergsgade 29N</h3>
+                </div>
+
+            </div>
+            <div class="datoogurl">
+                <p class="footer_centrer"><span id="current-date"></span></p>
+                <h2 class="footer_centrer">WWW:SILASL.DK</h2>
+            </div>
+        </div>
+
+    </footer>
     <script src="JS/menu.js"></script>
+    <script src="JS/dato.js"></script>
 </body>
 
 
