@@ -200,7 +200,7 @@ nav {
 #herobillede {
   width: 100%;
   height: 100%;
-  background-image: url(/Billeder/HEROTEKST.svg);
+  background-image: url(../Billeder/HEROTEKST.svg);
   background-size: cover;
 }
 
@@ -219,7 +219,7 @@ nav {
 #om_mig_knap2 {
   width: 100%;
   height: 100%;
-  background-image: url(/Billeder/om_mig.webp);
+  background-image: url(../Billeder/om_mig.webp);
   background-size: cover;
 }
 
@@ -231,7 +231,7 @@ nav {
 #portofolioknap2 {
   width: 100%;
   height: 100%;
-  background-image: url(/Billeder/portfolioknap.svg);
+  background-image: url(../Billeder/portfolioknap.svg);
   background-size: cover;
 }
 .pil2 {
@@ -309,6 +309,12 @@ p {
 .knap_tv h3 {
   margin: 0;
 }
+.slide {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  min-width: 400px;
+}
 
 /******* Om mig ********/
 
@@ -320,12 +326,6 @@ p {
 .overskrift {
   margin-bottom: 0;
   font-size: 6rem;
-}
-
-.slide {
-  width: 100%;
-  max-height: 500px;
-  object-fit: contain;
 }
 
 .om_tekst,
@@ -564,7 +564,7 @@ p {
 #Globus2 {
   width: 100%;
   height: 100%;
-  background-image: url(/Billeder/globus.svg);
+  background-image: url(../Billeder/globus.svg);
   background-size: cover;
   padding: 5%;
 }
