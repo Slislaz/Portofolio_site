@@ -1,3 +1,5 @@
+/********fra chat gpt ********/
+
 // Denne funktion viser dags dato i dansk format
 function setTodaysDate() {
   const today = new Date();

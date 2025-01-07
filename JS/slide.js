@@ -1,3 +1,5 @@
+/********fra chat gpt ********/
+
 document.addEventListener("DOMContentLoaded", function () {
   let slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
@@ -16,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Vis første slide
   showSlide(currentSlide);
 
-  // Skift slide hver 1.5r sekund
-  setInterval(nextSlide, 1500);
+  // Skift slide hver 1.8 sekund
+  setInterval(nextSlide, 1800);
 });

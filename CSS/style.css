@@ -3,13 +3,16 @@
 body {
   background-color: #e5e3d7;
   max-width: 100%;
-  margin: 10px;
+
   overflow-x: hidden;
+  max-width: 1900px;
+  margin-inline: auto;
 }
 
 main {
+  max-width: 1900px;
+  margin-inline: auto;
   margin: 10px;
-  max-width: 100%;
 }
 
 hr {
@@ -67,9 +70,10 @@ span {
 
 p {
   font-family: "century-gothic", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  line-height: 30px;
 }
 /***************** mikkels menu *****************/
 
@@ -121,7 +125,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #f4d1df;
+  color: black;
 }
 
 .burger {
@@ -230,7 +234,11 @@ nav {
   background-image: url(/Billeder/portfolioknap.svg);
   background-size: cover;
 }
-
+.pil2 {
+  position: relative;
+  bottom: -70%;
+  right: -45%;
+}
 /******* Portfolio style ********/
 
 .slide {
@@ -266,12 +274,17 @@ nav {
 p {
   grid-column: span 2;
 }
+
+.slide {
+  grid-row: 2;
+}
 .se_mere h2 {
   text-decoration: underline;
 }
 .se_mere2 h2 {
   margin-top: 0;
   text-decoration: underline;
+  font-size: 1.34rem;
 }
 .pil {
   width: 200px;
@@ -281,10 +294,12 @@ p {
   text-align: end;
   margin-top: 50px;
   margin-bottom: 100px;
+  margin-right: 10px;
 }
 .knap_tv {
   margin-top: 50px;
   margin-bottom: 100px;
+  margin-left: 10px;
 }
 
 .knap_th h3 {
@@ -308,12 +323,27 @@ p {
 }
 
 .slide {
-  max-height: 500px;
   width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.om_tekst,
+.om_tekst2 {
+  margin-right: 30px;
 }
 
 /********* mobil ********/
-@media (max-width: 700px) {
+@media (max-width: 760px) {
+  P {
+    font-size: 0.9rem;
+    line-height: 28px;
+  }
+  .slide {
+    max-height: 380px;
+    max-width: 500px;
+  }
+
   .hvidpynt {
     margin-top: 10px;
     display: flex;
@@ -334,12 +364,25 @@ p {
     width: 100%;
     height: auto;
     max-width: 400px;
+    margin-inline: auto;
+    margin-left: 15px;
+  }
+
+  .om_tekst,
+  .om_tekst2 {
+    margin: 25px;
+  }
+
+  .pil2 {
+    position: relative;
+    bottom: -70%;
+    right: -33%;
   }
 }
 
 /***** desktop ******/
 
-@media (min-width: 701px) {
+@media (min-width: 800px) {
   /******* forside desktop ******/
   .hvidpynt {
     margin-top: 10px;
@@ -362,6 +405,16 @@ p {
     aspect-ratio: 5/3;
     width: 40%;
   }
+
+  .grid_1-1c {
+    margin-inline: auto;
+  }
+
+  .overskrift {
+    margin-inline: auto;
+    min-width: 500px;
+  }
+
   /*********portfolio desktop ***********/
   .grid_1-1B {
     display: grid;
@@ -369,16 +422,20 @@ p {
     margin-top: 55px;
     margin-bottom: 135px;
   }
+  .grid_1-1B p {
+    min-width: 550px;
+  }
 
   .slide {
     grid-column: 2;
-    grid-row: span 3;
+    grid-row: 2/5;
   }
   .grid_1-1B h1 {
     grid-column: 3;
     grid-row: 1;
     margin: 0;
     margin-left: 10px;
+    gap: 20px;
   }
   .knap_tv {
     grid-row: 2;
@@ -434,6 +491,8 @@ p {
   .portræt {
     grid-column: 2;
     grid-row: span 3;
+    min-width: 400px;
+    max-width: 591px;
   }
 
   .om_tekst {
@@ -519,4 +578,112 @@ p {
 .footer_centrer {
   text-align: center;
   margin: 0;
+}
+
+/********* animation *********/
+
+#om_mig_knap:hover {
+  animation-name: om_mig_kf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  transition: 0.4s;
+}
+
+@keyframes om_mig_kf {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.pil,
+.pil2 img {
+  animation-name: pil_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+@keyframes pil_kf {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 2% 0;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+.knap_th img:hover {
+  animation-name: th_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+@keyframes th_kf {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 6% 0;
+    scale: 0.95;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+.knap_tv img:hover {
+  animation-name: tv_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  transition: ease-in-out;
+}
+
+@keyframes tv_kf {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: -6% 0;
+    scale: 0.95;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+/***** status synlighed portfolio ****/
+
+.statussynlighed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.statussynlighed h2 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  opacity: 55%;
+}
+
+.statussynlighed .aktiv2 {
+  opacity: 100%;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
